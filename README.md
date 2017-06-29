@@ -8,7 +8,7 @@ There are five folders in this repository:
 Simulation: contains phenotypic and genotypic data organized by setting 
 Analysis: contains analysis results organized by method 
 Summary_Statistics: contains summary statistics tables organized by setting 
-Code: contains the seven R scripts on Github 
+Code: contains the eight R scripts on Github 
 Read_Me: contains this read.me file
 
 “Paths” in the following description refer to where specific files were stored in this repository.  
