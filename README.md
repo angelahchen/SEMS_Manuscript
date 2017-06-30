@@ -1,4 +1,4 @@
-Sixteen simulation settings were analyzed using Stepwise Epistatic Model Selection (SEMS), Joint Linkage Analysis (JL), and Generalized Linear Model (GLM).
+Seventeen simulation settings were analyzed using Stepwise Epistatic Model Selection (SEMS), Joint Linkage Analysis (JL), and Generalized Linear Model (GLM).
 
 All the raw data and results are in an external cloud repository. You can access them through this link: https://uofi.box.com/s/krdkzkui1tzoh3jvov5a2cvsh7rrwl3z 
 
