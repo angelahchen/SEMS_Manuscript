@@ -13,7 +13,7 @@ Read_Me: contains this read.me file
 
 First, genotypic values were randomly selected from the NAM dataset (path to file: ~/Simulation/Input/) to simulate phenotypic values for each setting (path to simulations for each setting: ~/Simulation/Output/). Simulate_QTNs.R is applied. 
 
-Then, all sixteen simulation settings were analyzed using SEMS (path to raw results: ~/Analysis/SEMS), JL (path to raw results: ~/Analysis/JL), and GLM (path to results after correcting for multiple testing: ~/Analysis/GLM_after_FDR_at_0.5). 
+Then, all sixteen simulation settings were analyzed using SEMS (path to raw results: ~/Analysis/SEMS), JL (path to raw results: ~/Analysis/JL), and GLM (path to results after correcting for multiple testing: ~/Analysis/GLM_after_FDR_at_0.05). 
 
 **Note 1** Create_FDR_corrected_results_GLM.R corrects for multiple testing from raw GLM results (path to raw results: ~/Analysis/GLM). Please delete the first column before proceeding to the next step.
 
@@ -30,6 +30,6 @@ Generate_summary_statistics_JL.R
 Parameters_for_summary_statistics_GLM.R
 Generate_summary_statistics_GLM.R 
 
-**Note 3** Setting 8 and Setting 16 contain tables for different window sizes: 500KB, 2MB, and 10MB. These are shown in Figure 1 and Figure 2 in the manuscript.     
+**Note 3** Setting 8 and Setting 16 contain tables for different window sizes: 500KB, 2MB, and 10MB. These are shown in Figure 1-3 in the manuscript.     
 
  
