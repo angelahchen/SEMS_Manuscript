@@ -23,5 +23,6 @@
                                 169132432, 176664055, 175775017, 156591811, 150168908) #This will make the Manhattan plots look good
   
   ################Create statistics and plots #####################
-  source("~/Generate_summary_statistics_SEMS.R")
+  source("~/Code")
+  source("Generate_summary_statistics_GLM.R")
   assess.the.results()

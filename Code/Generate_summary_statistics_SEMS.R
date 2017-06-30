@@ -4,13 +4,14 @@
 ################Begin the function
 assess.the.results <- function(){
   #Read in the information on thesimulated QTN
-  #setwd(paste(home.dir, simulated.QTL.info.dir, sep = ""))
+  setwd(paste(home.dir, simulated.QTL.info.dir, sep = ""))
   the.simulated.additive.QTN <- read.table(paste("Genotypic.information.for.",number.of.simulated.additive.QTN,".Additive.QTN.txt", sep = ""), head = TRUE)
   the.simulated.epistatic.QTN <- read.table(paste("Genotypic.information.for.",number.of.simulated.epistatic.QTN.pairs,".Epistatic.QTN.txt", sep = ""), head = TRUE)
+  setwd(paste(home.dir, simulation.results.dir, sep = ""))
   the.results <- read.csv(paste(file.name.prefix, ".csv",sep = ""), head = TRUE)
   #the.results <- the.results[-1,]
   #For each heritability
-  #setwd(paste(home.dir, simulation.results.dir, sep = ""))
+  setwd(paste(home.dir, summary.dir, sep = ""))
   count <- 0
   
   
@@ -21,13 +22,13 @@ assess.the.results <- function(){
                                       (as.character(the.results[,2])=="Error")|
                                       (as.character(the.results[,2])=="NaN")|
                                       is.na(the.results[,2]) ), ]
-  if(nrow(the.results) != 0){
-    #Make graph 3 #NOTE: Turn this into a function
-    create.graph.3(the.results = the.results, the.simulated.additive.QTN  =  the.simulated.additive.QTN,
-                   the.simulated.epistatic.QTN = the.simulated.epistatic.QTN, setting.number = setting.number,
-                   include.additive.QTL = include.additive.QTL, include.epistatic.QTL = include.epistatic.QTL,
-                   summary.dir = summary.dir)  
-    
+  # if(nrow(the.results) != 0){
+  #   #Make graph 3 #NOTE: Turn this into a function
+  #   create.graph.3(the.results = the.results, the.simulated.additive.QTN  =  the.simulated.additive.QTN,
+  #                  the.simulated.epistatic.QTN = the.simulated.epistatic.QTN, setting.number = setting.number,
+  #                  include.additive.QTL = include.additive.QTL, include.epistatic.QTL = include.epistatic.QTL,
+  #                  summary.dir = summary.dir)
+
     the.summary.statistics <- create.summary.statistics(the.results = the.results, the.simulated.additive.QTN  =  the.simulated.additive.QTN,
                                                         the.simulated.epistatic.QTN = the.simulated.epistatic.QTN, setting.number = setting.number,
                                                         include.additive.QTL = include.additive.QTL, include.epistatic.QTL = include.epistatic.QTL,
@@ -48,7 +49,7 @@ assess.the.results <- function(){
                                                                                         ".Epi.False.Signals.txt", sep = " "), quote = FALSE, sep = "\t", 
                 row.names = FALSE,col.names = TRUE)
     
-  }
+  # }
   
 }#end assess.the.results()
 

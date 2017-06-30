@@ -1,13 +1,14 @@
 
 ############# Parameters for the setting ###################simulated.QTL.info.dir = "/Simulation/Output/Setting_1/"; # where the simulated QTNs are 
-summary.dir = "/Summary_Statistics/Setting_1/JL/"; # where the summary statistics tables go
-simulation.results.dir = "/Analysis/JL/"; # where the analysis results file is  
-file.name.prefix= "Setting_1_JL" # file name of the analysis results
-number.of.simulated.additive.QTN = 1; # when there's no additive QTN, enter 1
-number.of.simulated.epistatic.QTN.pairs = 4;
-setting.number = 1;
-include.additive.QTL = FALSE;
-include.epistatic.QTL = TRUE;
+  simulated.QTL.info.dir = "/Simulation/Output/Setting_1/"; # where the simulated QTNs are 
+  summary.dir = "/Summary_Statistics/Setting_1/JL/"; # where the summary statistics tables go
+  simulation.results.dir = "/Analysis/JL/"; # where the analysis results file is  
+  file.name.prefix= "Setting_1_JL" # file name of the analysis results
+  number.of.simulated.additive.QTN = 1; # when there's no additive QTN, enter 1
+  number.of.simulated.epistatic.QTN.pairs = 4;
+  setting.number = 1;
+  include.additive.QTL = FALSE;
+  include.epistatic.QTL = TRUE;
 
 ############# Global parameters ###################
   setwd()
@@ -21,5 +22,6 @@ include.epistatic.QTL = TRUE;
                                 169132432, 176664055, 175775017, 156591811, 150168908) #This will make the Manhattan plots look good
 
 ################Create statistics and plots #####################
-  source("~/Generate_summary_statistics_JL.R")
-assess.the.results()
+  setwd("~/Code")
+  source("Generate_summary_statistics_JL.R")
+  assess.the.results()

@@ -3,13 +3,12 @@ biocLite("multtest")
 library(multtest)
 
 ############# Parameters for the setting ###################
-simulation.results.dir = ""; # where the analysis results file is (original file before applying FDR)
-GLM_results = ""; # file name of the analysis results (before applying FDR)
+GLM_results = "Setting_1_GLM"; # file name of the analysis results (before applying FDR)
 
 
 ### Post-process the GLM results 
 #####################################################
-setwd(paste(home.dir, simulation.results.dir, sep = ""))
+setwd("~/Analysis/GLM/") # where the analysis results file is (original file before applying FDR)
 PWI<- read.table(paste(GLM_results,".txt",sep=""), header = TRUE) 
 
 #Parse results by traits (100 traits totally; 100*1106=110600 phenotype values)
@@ -106,8 +105,8 @@ GLM <- Reduce(rbind, PWIP)
 ################Create FDR corrected results ##################### 
 ## Write a table for the GLM_results  
 #write.table(GLM, file=paste("FDR_adjusted_", GLM_results, ".txt", sep = ""), sep="", eol="\n", na="NA", row.names = TRUE, col.names = TRUE) 
-
-write.csv(GLM, file=paste("FDR_adjusted_", GLM_results, ".csv", sep = ""),
+setwd("~/Analysis/GLM_after_FDR_at_0.5")
+write.csv(GLM, file=paste(GLM_results, "_FDR_adjusted",".csv", sep = ""),
           eol = "\n", na = "NA", row.names = TRUE)
 
 ## Note: the generated csv file contains 1 extra column [,1]. You need to delete this column before processing "Parameters_for_summary_statistics_GLM.R"
