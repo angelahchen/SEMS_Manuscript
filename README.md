@@ -13,7 +13,7 @@ Read_Me: contains this read.me file
 
 First, genotypic values were randomly selected from the NAM dataset (path to file: ~/Simulation/Input/) to simulate phenotypic values for each setting (path to simulations for each setting: ~/Simulation/Output/). Simulate_QTNs.R is applied. 
 
-Then, all sixteen simulation settings were analyzed using SEMS (path to raw results: ~/Analysis/SEMS), JL (path to raw results: ~/Analysis/JL), and GLM (path to results after correcting for multiple testing: ~/Analysis/GLM_after_FDR_at_0.05). 
+Then, all seventeen simulation settings were analyzed using SEMS (path to raw results: ~/Analysis/SEMS), JL (path to raw results: ~/Analysis/JL), and GLM (path to results after correcting for multiple testing: ~/Analysis/GLM_after_FDR_at_0.05). 
 
 **Note 1** Create_FDR_corrected_results_GLM.R corrects for multiple testing from raw GLM results (path to raw results: ~/Analysis/GLM). Please delete the first column before proceeding to the next step.
 
