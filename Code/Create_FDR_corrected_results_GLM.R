@@ -105,7 +105,7 @@ GLM <- Reduce(rbind, PWIP)
 ################Create FDR corrected results ##################### 
 ## Write a table for the GLM_results  
 #write.table(GLM, file=paste("FDR_adjusted_", GLM_results, ".txt", sep = ""), sep="", eol="\n", na="NA", row.names = TRUE, col.names = TRUE) 
-setwd("~/Analysis/GLM_after_FDR_at_0.5")
+setwd("~/Analysis/GLM_after_FDR_at_0.05")
 write.csv(GLM, file=paste(GLM_results, "_FDR_adjusted",".csv", sep = ""),
           eol = "\n", na = "NA", row.names = TRUE)
 

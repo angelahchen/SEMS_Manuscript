@@ -2,7 +2,7 @@
 ############# Parameters for the setting ###################
   simulated.QTL.info.dir = "/Simulation/Output/Setting_1/"; # where the simulated QTNs are 
   summary.dir = "/Summary_Statistics/Setting_1/GLM/"; # where the summary statistics tables go
-  simulation.results.dir = "/Analysis/GLM_after_FDR_at_0.5/"; # where the analysis results (after applying FDR) file is 
+  simulation.results.dir = "/Analysis/GLM_after_FDR_at_0.05/"; # where the analysis results (after applying FDR) file is 
   file.name.prefix= "Setting_1_GLM_FDR_adjusted" # file name of the analysis results (after applying FDR)
   number.of.simulated.additive.QTN = 1; # when there's no additive QTN, enter 1
   number.of.simulated.epistatic.QTN.pairs = 4;
